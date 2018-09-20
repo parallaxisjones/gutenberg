@@ -154,7 +154,6 @@ export class RichText extends Component {
 			tagName,
 			style,
 			formattingControls,
-			formatters,
 			value,
 		} = this.props;
 
@@ -163,7 +162,6 @@ export class RichText extends Component {
 				formats={ this.state.formats }
 				onChange={ this.changeFormats }
 				enabledControls={ formattingControls }
-				customControls={ formatters }
 			/>
 		);
 
@@ -194,7 +192,6 @@ export class RichText extends Component {
 
 RichText.defaultProps = {
 	formattingControls: FORMATTING_CONTROLS.map( ( { format } ) => format ),
-	formatters: [],
 	format: 'children',
 };
 
